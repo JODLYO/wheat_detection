@@ -1,0 +1,6 @@
+albumentations<0.5.0,>=0.4.5
+matplotlib<4.0.0,>=3.2.2
+numpy<2.0.0,>=1.19.0
+opencv-python<5.0.0,>=4.2.0
+pandas<2.0.0,>=1.0.5
+tensorflow==2.2.0
