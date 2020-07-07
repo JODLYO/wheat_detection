@@ -96,8 +96,12 @@ def compile_model(model):
 def get_model_and_callbacks():
     model = create_model()
     model = compile_model(model)
+
     callbacks = [
         tf.keras.callbacks.ReduceLROnPlateau(monitor='loss', patience=2, verbose=1),
         tf.keras.callbacks.EarlyStopping(monitor='loss', patience=5, verbose=1, restore_best_weights=True),
+        tf.keras.callbacks.ModelCheckpoint(filepath='model_weights/model_weights.ckpt',
+                                           save_weights_only=True,
+                                           verbose=1)
     ]
     return model, callbacks

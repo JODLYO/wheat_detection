@@ -27,7 +27,7 @@ if __name__ == '__main__':
     val_DG = DataGenerator(df, val_path, 1, False, new_img_shape, False)
     X, y = train_DG[10]
     test = train_DG[10]
-    
+
     model, callbacks = get_model_and_callbacks()
 
     history = model.fit(
